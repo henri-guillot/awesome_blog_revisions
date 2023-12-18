@@ -1,0 +1,48 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-12">
+      <h1>sélection: <%= @article.title %></h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 py-3">
+      <div class="big-card-article">
+        <%= cl_image_tag @article.photo.key %>
+        <div class="card-article-infos d-flex align-items-center justify-content-between p-5 m-5">
+          <div>
+            <h2 class="mr-3"><%= @article.title %></h2>
+          </div>
+        </div>
+        <div class="flex align-items-center mx-5 mb-5" style="text-align: center">
+            <h4><%= @article.content  %></h4>
+        </div>
+    </div>`
+  </div>
+
+  <div class="col-6">
+    <div class="big-card-article p-4">
+      <h5>Réserve ce vélo!</h5>
+
+      <form action="">
+        <div class="input-group">
+          <span class="input-group-text" id="start-date-label">du:</span>
+          <input type="text" class="form-control" placeholder="12/10/2017" aria-label="start-date" aria-describedby="start-date-label">
+        </div>
+        <div class="input-group mt-2">
+          <span class="input-group-text" id="end-date-label">au:</span>
+          <input type="text" class="form-control" placeholder="18/10/2017" aria-label="end-date" aria-describedby="start-date-label">
+        </div>
+        <input type="submit" value="Réserver" class="btn big-btn-ghost mt-2" style="width: 100%">
+      </form>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-12">
+      <p><%= link_to "       Je réserve ce vélo maintenant      ", root_path, class: "d-flex justify-content-center mx-5 btn big-btn-ghost" %></p>
+    </div>
+  </div>
+
+</div>
