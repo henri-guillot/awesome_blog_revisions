@@ -1,4 +1,7 @@
 class Article < ApplicationRecord
   belongs_to :user
-  belongs_to :comment
+  has_many :comments
+  validates :title, presence: true
+  validates :body, presence: true, length: { minimum: 10 }
+  has_one_attached :photo
 end

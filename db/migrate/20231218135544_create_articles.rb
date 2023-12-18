@@ -6,7 +6,6 @@ class CreateArticles < ActiveRecord::Migration[7.1]
       t.string :content
       t.date :publication_date
       t.references :user, null: false, foreign_key: true
-      t.references :comment, null: false, foreign_key: true
 
       t.timestamps
     end
